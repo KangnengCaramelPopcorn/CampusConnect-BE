@@ -11,7 +11,7 @@ import java.util.Map;
 public class HealthCheckController {
     @Value("${server.env}")
     private String env;
-    @Value("${server.port")
+    @Value("${server.port}")
     private String port;
     @Value("${server.serverAddress}")
     private String serverAddress;
