@@ -6,12 +6,14 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
 @Getter
+@Setter
 @NoArgsConstructor
 public class Comment {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +23,7 @@ public class Comment {
     private String content;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "issue_id")
-    @JsonIgnore //원래는 이거대신 resDto써야함..
+    @JsonIgnore
     private Issue issue;
 
     @Builder
@@ -31,4 +33,8 @@ public class Comment {
         this.content = content;
         this.issue = issue;
     }
+    public void mergeComment(Issue issue) {
+        this.issue = issue;
+    }
+
 }
