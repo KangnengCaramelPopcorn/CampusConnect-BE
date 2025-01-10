@@ -5,18 +5,20 @@ import com.caramelpopcorn.campusconnect.global.Role;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
 @Entity
+@Setter
 public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", updatable = false)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(updatable = false)
     private Long id;
-
-    @Column(name = "no", nullable = false, unique = true)
+    @Column(nullable = false, unique = true)
     private String no;
     private String name;
     private String email;
@@ -24,7 +26,8 @@ public class User {
     private String university;
     private String major;
     private Role role;
-    private Long score;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<UserIssue> userIssues = new ArrayList<>();
 
     public User(UserDTO.CreateUser userDto, Role role, String password, Long score) {
         this.no = userDto.getNo();
@@ -35,5 +38,9 @@ public class User {
         this.major = userDto.getMajor();
         this.role = role;
         this.score = score;
+    }
+    public User(String no, String name) {
+        this.no = no;
+        this.name = name;
     }
 }

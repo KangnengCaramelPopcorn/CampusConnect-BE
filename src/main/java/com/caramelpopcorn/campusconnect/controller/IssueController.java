@@ -3,11 +3,13 @@ package com.caramelpopcorn.campusconnect.controller;
 import com.caramelpopcorn.campusconnect.dto.AiReqDto;
 import com.caramelpopcorn.campusconnect.dto.IssueReqDto;
 import com.caramelpopcorn.campusconnect.dto.IssueResDto;
+import com.caramelpopcorn.campusconnect.dto.MergeIssueResDto;
 import com.caramelpopcorn.campusconnect.entity.Issue;
 import com.caramelpopcorn.campusconnect.global.State;
 import com.caramelpopcorn.campusconnect.global.code.ErrorCode;
 import com.caramelpopcorn.campusconnect.global.code.SuccessCode;
 import com.caramelpopcorn.campusconnect.service.IssueService;
+import com.caramelpopcorn.campusconnect.service.UserIssueService;
 import com.caramelpopcorn.campusconnect.util.ApiResponseUtil;
 import com.caramelpopcorn.campusconnect.util.Api_Response;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -25,6 +27,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class IssueController {
     private final IssueService issueService;
+    private final UserIssueService userIssueService;
 
     @PostMapping("/create")
     public <T> ResponseEntity<Api_Response<T>> createIssue(@RequestBody IssueReqDto issueReqDto) {
@@ -65,5 +68,19 @@ public class IssueController {
     public ResponseEntity<Api_Response<Issue>> updateState(@PathVariable Long id, @RequestParam State state) {
         Issue updatedIssue = issueService.updateIssueState(id, state);
         return ApiResponseUtil.createSuccessResponse(SuccessCode.UPDATE_SUCCESS, updatedIssue);
+    }
+    @PostMapping("/ai/mergeissue")
+    public ResponseEntity<Api_Response<Issue>> mergeIssue(@RequestBody MergeIssueResDto mergeIssueResDto) {
+        userIssueService.mergeIssues(mergeIssueResDto);
+        return ApiResponseUtil.createSuccessResponse(SuccessCode.UPDATE_SUCCESS, null);
+    }
+
+    @GetMapping("/test1")
+    public ResponseEntity<Api_Response<List<Issue>>> getAllIssuesTest1() {
+        return ApiResponseUtil.createSuccessResponse(SuccessCode.SELECT_SUCCESS, issueService.test1());
+    }
+    @GetMapping("/test2")
+    public ResponseEntity<Api_Response<List<Issue>>> getAllIssuesTest2() {
+        return ApiResponseUtil.createSuccessResponse(SuccessCode.SELECT_SUCCESS, issueService.test2());
     }
 }

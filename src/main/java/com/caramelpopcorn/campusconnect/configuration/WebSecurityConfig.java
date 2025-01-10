@@ -14,10 +14,7 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +22,7 @@ import java.util.List;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
-    private final List<String> freePathList = new ArrayList<>(List.of("/", "/env", "/hc", "/swagger-ui/*", "/api/user/signup", "/api/user/login", "api/mail/*", "/api/issue/priority"));
+    private final List<String> freePathList = new ArrayList<>(List.of("/", "/env", "/hc", "/swagger-ui/*", "/api/user/signup", "/api/user/login", "api/mail/*", "/api/issue/priority", "/api/issue/ai/mergeissue", "/api/issue/test1","/api/issue/test2"));
     private final JWTUtil jwtUtil;
     private final CustomUserDetailsService userDetailsService;
     @Bean
