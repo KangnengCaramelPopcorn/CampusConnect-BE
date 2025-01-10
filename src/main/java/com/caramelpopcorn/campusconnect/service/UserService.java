@@ -28,7 +28,7 @@ public class UserService {
         }
 
         String encodedPassword = bCryptPasswordEncoder.encode(dto.getPassword());
-        User user = new User(dto, Role.STUDENT, encodedPassword);
+        User user = new User(dto, Role.STUDENT, encodedPassword, 0L);
         userRepository.save(user);
     }
     public ResponseEntity<?> login(UserDTO.loginDto dto) {

@@ -29,7 +29,7 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<UserIssue> userIssues = new ArrayList<>();
 
-    public User(UserDTO.CreateUser userDto, Role role, String password) {
+    public User(UserDTO.CreateUser userDto, Role role, String password, Long score) {
         this.no = userDto.getNo();
         this.password = password;
         this.email = userDto.getEmail();
@@ -37,6 +37,7 @@ public class User {
         this.university = userDto.getUniversity();
         this.major = userDto.getMajor();
         this.role = role;
+        this.score = score;
     }
     public User(String no, String name) {
         this.no = no;
