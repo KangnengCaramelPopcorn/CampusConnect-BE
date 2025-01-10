@@ -1,12 +1,11 @@
 package com.caramelpopcorn.campusconnect.entity;
 
+import com.caramelpopcorn.campusconnect.dto.UserDTO;
+import com.caramelpopcorn.campusconnect.global.Role;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Table(name = "users")
 @NoArgsConstructor
 @Getter
 @Entity
@@ -19,34 +18,20 @@ public class User {
 
     @Column(name = "no", nullable = false, unique = true)
     private String no;
-
-    @Column(name = "name")
     private String name;
-
-    @Column(name = "email")
     private String email;
-
-    @Column(name = "password")
     private String password;
-
-    @Column(name = "university")
     private String university;
-
-    @Column(name = "major")
     private String major;
+    private Role role;
 
-    @Column(name = "role")
-    private String role;
-
-    @Builder
-    public User(String no, String name, String email, String password, String university,
-                String major, String role) {
-        this.no = no;
-        this.name = name;
-        this.email = email;
+    public User(UserDTO.CreateUser userDto, Role role, String password) {
+        this.no = userDto.getNo();
         this.password = password;
-        this.university = university;
-        this.major = major;
+        this.email = userDto.getEmail();
+        this.name = userDto.getName();
+        this.university = userDto.getUniversity();
+        this.major = userDto.getMajor();
         this.role = role;
     }
 }
