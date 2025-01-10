@@ -40,7 +40,7 @@ public class MailService {
 
         MimeMessage message = CreateMail(mail, number);
 
-        httpSession.setAttribute("timer", System.currentTimeMillis() + 90 * 1000);
+        httpSession.setAttribute("timer", System.currentTimeMillis() + 90 * 1000 * 2);
         httpSession.setAttribute("number", number);
 
         javaMailSender.send(message);
