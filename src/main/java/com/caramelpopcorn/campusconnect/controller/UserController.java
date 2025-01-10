@@ -31,7 +31,7 @@ public class UserController {
             return ApiResponseUtil.createErrorResponse(CommonErrorCode.FAIL_SIGNUP_ERROR);
         }
     }
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody UserDTO.loginDto dto) {
         try {
             return userService.login(dto);

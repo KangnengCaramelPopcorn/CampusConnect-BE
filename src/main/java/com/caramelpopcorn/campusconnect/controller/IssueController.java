@@ -5,15 +5,20 @@ import com.caramelpopcorn.campusconnect.dto.IssueReqDto;
 import com.caramelpopcorn.campusconnect.dto.IssueResDto;
 import com.caramelpopcorn.campusconnect.entity.Issue;
 import com.caramelpopcorn.campusconnect.global.State;
+import com.caramelpopcorn.campusconnect.global.code.ErrorCode;
 import com.caramelpopcorn.campusconnect.global.code.SuccessCode;
 import com.caramelpopcorn.campusconnect.service.IssueService;
 import com.caramelpopcorn.campusconnect.util.ApiResponseUtil;
 import com.caramelpopcorn.campusconnect.util.Api_Response;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/issue")
@@ -27,10 +32,21 @@ public class IssueController {
         return ApiResponseUtil.createSuccessResponse(SuccessCode.INSERT_SUCCESS, null);
     }
 
-    @PostMapping("/priority")
-    public <T> ResponseEntity<Api_Response<T>> aiPriority(@RequestBody AiReqDto aiReqDto) {
-        // AI 관련 로직(작성중)
-        return ApiResponseUtil.createSuccessResponse(SuccessCode.INSERT_SUCCESS, null);
+    @GetMapping("/priority")
+    public ResponseEntity<?> aiPriority() throws IOException {
+        File jsonFile = new File(getClass().getClassLoader().getResource("test-data.json").getFile());
+        ObjectMapper objectMapper = new ObjectMapper();
+        List<AiReqDto> aiReqDtoList = objectMapper.readValue(jsonFile, objectMapper.getTypeFactory().constructCollectionType(List.class, AiReqDto.class));
+
+        System.out.println("test" + aiReqDtoList);
+        // "전산" 카테고리인 게시물 필터링 후 상위 5개만 가져오기
+        List<AiReqDto> recentPosts = aiReqDtoList.stream()
+                .filter(post -> "전산".equals(post.getCategory())) // 카테고리가 '전산'인 게시물만 필터링
+                .limit(5) // 5개만 가져오기
+                .collect(Collectors.toList());
+
+        // result만 반환
+        return ResponseEntity.ok(recentPosts); // 상태 코드는 200 OK, 메시지는 default
     }
 
     @GetMapping("/all")

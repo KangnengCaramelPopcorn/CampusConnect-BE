@@ -24,8 +24,9 @@ public class User {
     private String university;
     private String major;
     private Role role;
+    private Long score;
 
-    public User(UserDTO.CreateUser userDto, Role role, String password) {
+    public User(UserDTO.CreateUser userDto, Role role, String password, Long score) {
         this.no = userDto.getNo();
         this.password = password;
         this.email = userDto.getEmail();
@@ -33,5 +34,6 @@ public class User {
         this.university = userDto.getUniversity();
         this.major = userDto.getMajor();
         this.role = role;
+        this.score = score;
     }
 }

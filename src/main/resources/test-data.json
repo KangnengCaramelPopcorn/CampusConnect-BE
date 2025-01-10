@@ -1,0 +1,302 @@
+[
+  {
+    "complaint_id": 1,
+    "comment_count":1,
+    "like_count": 5,
+    "title": "I one pass 인증",
+    "category": "전산",
+    "content": "인증 기관코드 발급코드 휴대폰에 i-one pass 어플을 설치했으나 바로 기관코드와 아이디, 발급코드를 입력하라고 하는데 어떻게 코드를 알 수 있을까요? 휴대폰을 바꿔서 재발급 받고자 합니다",
+    "solution": "기관코드와 발급코드는 학사 담당자에게 문의하세요.",
+    "priority_score": 84.3
+  },
+  {
+    "complaint_id": 2,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "i-one-pass 통합로그인 2차인증발급을 예전에 했었는데요",
+    "category": "전산",
+    "content": "통합정보시스템 2차인증코드발급 예전에 앱을 잘 설치해서 2차인증발급을 예전에 했었는데요 앱을 실수로 삭제했다가 다시 깔았는데 코드번호를 모르겠는데 어디서 확인해야 할까요?",
+    "solution": "학교 포털에서 발급코드를 확인하거나 재발급 요청하세요.",
+    "priority_score": 78.5
+  },
+  {
+    "complaint_id": 3,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "i-one pass에 관해 질문드립니다.",
+    "category": "전산",
+    "content": "전산 i-one pass 어플을 깔아서 로그인을 할려고 들어왔는데 기관코드와 발급코드를 작성해야한다고 나와있습니다. 하지만 저는 이와 관련된 메일이나 문자를 받은 기억이 없는데 혹시 어디서 확인가능할까요?",
+    "solution": "기관코드 및 발급코드는 포털 공지나 학사팀에 문의하세요.",
+    "priority_score": 66.7
+  },
+  {
+    "complaint_id": 4,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "i one pass 2차 통합 로그인 관련해서 문의드립니다.",
+    "category": "전산",
+    "content": "로그인 정합정보시스템 핸드폰을 바꾸는 과정에서 i one pass가 삭제되었는데 그 이후로 매번 정합정보시스템에 들어가기 위해서는 매번 이메일을 통해 비밀번호를 확인하고 로그인 해야하는 번거로움을 거쳐야 했습니다.",
+    "solution": "포털에서 i one pass를 재설치하고 발급코드를 재신청하세요.",
+    "priority_score": 54.2
+  },
+  {
+    "complaint_id": 5,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "핸드폰 변경 후 통합로그인 2차 인증",
+    "category": "전산",
+    "content": "통합로그인 2차인증 안녕하세요, 핸드폰 변경 후 i-one pass 등록이 해지되었습니다. 기관코드와 아이디, 발급코드를 입력해야 해서 학교 홈페이지 비밀번호 변경을 해봤지만 발급코드가 따로 오지 않아서 문의드립니다.",
+    "solution": "발급코드 재신청은 포털에서 가능합니다.",
+    "priority_score": 89.5
+  },
+  {
+    "complaint_id": 6,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "pc에서 통합로그인 문제",
+    "category": "전산",
+    "content": "통합로그인 pc pc에서 통합로그인이 몇 달째 안되는데, 해결방법 있을까요?",
+    "solution": "학교 IT 지원팀에 문의하여 로그인 문제를 해결하세요.",
+    "priority_score": 73.1
+  },
+  {
+    "complaint_id": 7,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "이러닝 캠퍼스, 코스모스 접속 불가",
+    "category": "전산",
+    "content": "접속 불가 접속불가 6/20(수) 이러닝 캠퍼스, 코스모스 접속이 불가합니다. 과제 제출, 계절학기 수업을 들어야하는데 확인해 주시거나 전화연결이 되었으면 합니다.",
+    "solution": "IT 지원팀에 연락하여 접속 문제를 해결하세요.",
+    "priority_score": 80.4
+  },
+  {
+    "complaint_id": 8,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "종합정보시스템 학적 관리 자격증 조회 관련 문의",
+    "category": "전산",
+    "content": "종합정보시스템 학적관리 자격증 조회 종합정보시스템 학적관리에서 자격증 조회란이 있는데 이거는 어떤 것인가요? 따로 추가 하는 건 안 보이던데요..",
+    "solution": "학사 담당자에게 자격증 관리 옵션에 대해 문의하세요.",
+    "priority_score": 55.7
+  },
+  {
+    "complaint_id": 9,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "종합정보시스템 2차인증 발급코드",
+    "category": "전산",
+    "content": "2차인증 발급코드 휴대폰에 i-one pass 어플을 설치했으나 바로 기관코드와 아이디, 발급코드를 입력하라고 하는데 발급코드 관련한 공지를 못 찾겠습니다.",
+    "solution": "발급코드 관련 안내는 포털 공지를 확인하세요.",
+    "priority_score": 41.8
+  },
+  {
+    "complaint_id": 10,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "Pc 통합로그인",
+    "category": "전산",
+    "content": "이러닝 캠퍼스 로그인 핸드폰으로는 로그인이 되지만 pc로는 아이디와 비밀번호가 틀리지 않았음에도 로그인이 되지 않습니다",
+    "solution": "IT 지원팀에 문의하여 PC 로그인 문제를 해결하세요.",
+    "priority_score": 68.2
+  },
+  {
+    "complaint_id": 11,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "어학연수 관련 질문",
+    "category": "학사",
+    "content": "2. 어학연수 신청방법이 궁금합니다.",
+    "solution": "어학연수 신청 방법은 학사 공지를 확인하세요.",
+    "priority_score": 75.4
+  },
+  {
+    "complaint_id": 12,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "학교생활&진로 관련",
+    "category": "학사",
+    "content": "전반적인 학교생활이나 진로에 대해서 직접 상담을 받을 수 있는 곳이 있을까요?",
+    "solution": "학생 상담실에서 도움을 받을 수 있습니다.",
+    "priority_score": 61.3
+  },
+  {
+    "complaint_id": 13,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "건의 사항: 샬롬관 709호 강의실 의자 교체 요청",
+    "category": "시설",
+    "content": "건의 사항: 샬롬관 709호 강의실 의자 교체 요청",
+    "solution": "교체 요청 검토 중입니다.",
+    "priority_score": 78.2
+  },
+  {
+    "complaint_id": 14,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "강의실 환경 개선을 위한 신식 에어컨 설치 건의",
+    "category": "시설",
+    "content": "저는 정경학부에 재학 중인 장상두입니다. 오늘 저는 강의실의 학습 환경 개선을 위해 건의드리고자 합니다.",
+    "solution": "신식 에어컨 설치 요청 검토 중입니다.",
+    "priority_score": 82.1
+  },
+  {
+    "complaint_id": 15,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "휴학 관련 문의",
+    "category": "학사",
+    "content": "학교 휴학 관련 문의 메일은 어디다 보낼수 있을까요?",
+    "solution": "학사 담당 이메일을 확인하세요.",
+    "priority_score": 50.8
+  },
+  {
+    "complaint_id": 16,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "졸업평가 면제조건",
+    "category": "학사",
+    "content": "졸업평가 면저 글경 19학번인데 졸업평가 면제조건이 어떻게되나요",
+    "solution": "졸업평가 면제조건은 학사 공지를 참고하세요.",
+    "priority_score": 65.4
+  },
+  {
+    "complaint_id": 17,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "취업계 관련 유고결석 문의 건",
+    "category": "학사",
+    "content": "취업 유고결석 안녕하세요, 경제세무학과 4학년 201982072 서보혁입니다. 다름이 아니오라, 8학기 초과등록자인데 유고결석(취업계) 가능할까요?",
+    "solution": "유고결석 처리 관련 담당자에게 문의하세요.",
+    "priority_score": 89.6
+  },
+  {
+    "complaint_id": 18,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "졸업이수학점 관련 질문입니다",
+    "category": "학사",
+    "content": "학점 졸업 학점 졸업이수학점 관련 질문입니다. https://web.kangnam.ac.kr/menu/c5dc4b1d7b4dd402e5e6a7a8471eb55c.do?encMenuSeq=eb3b60b9e551de71300d75bf7894c98d",
+    "solution": "입학년도 기준으로 학점이 계산됩니다.",
+    "priority_score": 70.2
+  },
+  {
+    "complaint_id": 19,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "예비졸업심사 관련",
+    "category": "학사",
+    "content": "졸업심사 학점 19년도 입학생이라 심화전공 선택해서 전공기초6학점+전공선택60학점채워야되는데...",
+    "solution": "예비졸업심사 기준 확인 중입니다.",
+    "priority_score": 75.9
+  },
+  {
+    "complaint_id": 20,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "I one pass 인증",
+    "category": "전산",
+    "content": "인증 기관코드 발급코드 휴대폰에 i-one pass 어플을 설치했으나 바로 기관코드와 아이디, 발급코드를 입력하라고 하는데...",
+    "solution": "기관코드 발급 절차를 확인 중입니다.",
+    "priority_score": 40.3
+  },
+  {
+    "complaint_id": 21,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "강의실 환경 개선을 위한 신식 에어컨 설치 건의",
+    "category": "시설",
+    "content": "에어컨 샬롬관 안녕하세요, 저는 정경학부에 재학 중인 장상두입니다. 오늘 저는 강의실의 학습 환경 개선을 위해 건의드리고자 합니다. 현재 저희 대학교 강의실의 에어컨이 오래되어 제 기능을 다하지 못하고 있습니다. 특히, 강의실에 많은 학생들이 몰리다 보니 더위가 심하게 느껴집니다...",
+    "solution": "신식 에어컨 설치 요청을 검토 중입니다.",
+    "priority_score": 85.3
+  },
+  {
+    "complaint_id": 22,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "경천관 1층 정수기 교체 관련 문의",
+    "category": "시설",
+    "content": "정수기 교체 관련 문의 경천관 1층 정수기 언제나 노고 많으십니다. 다름이 아니라 건의드리고 싶은 사항이 있어 글을 남깁니다...",
+    "solution": "정수기 교체 가능 여부를 확인 중입니다.",
+    "priority_score": 72.4
+  },
+  {
+    "complaint_id": 3,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "기숙사 신청",
+    "category": "시설",
+    "content": "가숙사 신청 2학기 기숙사 신청기간 언제까지 인가요?",
+    "solution": "기숙사 신청기간은 학생 포털 공지를 참고하세요.",
+    "priority_score": 34.8
+  },
+  {
+    "complaint_id": 4,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "샬롬 601호 뒷문이 너무 쾅쾅 닫힙니다",
+    "category": "시설",
+    "content": "샬롬관 문 샬롬관 조치 부탁드립니다...",
+    "solution": "문 소음을 줄이는 대책을 논의 중입니다.",
+    "priority_score": 40.2
+  },
+  {
+    "complaint_id": 5,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "교육관 시설 보수 관련하여 문의 드립니다.",
+    "category": "시설",
+    "content": "천장형에어컨 교육관시설보수 안녕하세요. 교육관 건물 에어컨 시설 관련하여 건의드릴게 있어 연락 드렸습니다...",
+    "solution": "에어컨 바람막이 설치 요청을 검토 중입니다.",
+    "priority_score": 88.9
+  },
+  {
+    "complaint_id": 6,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "주차 정기권 기간 중 차량 변경",
+    "category": "시설",
+    "content": "정기권 차량변경 주차권 학기 정기권이 끊어져있는 상태인데 도중에 차량을 변경하게 되었습니다...",
+    "solution": "차량 변경 절차를 학생 포털에서 확인하세요.",
+    "priority_score": 55.7
+  },
+  {
+    "complaint_id": 7,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "도서관 소등, 냉난방 관련 문의드립니다.",
+    "category": "시설",
+    "content": "도서관 소등, 냉난방 도서관 오후시간에 부분소등을 하는 이유는 무엇인가요?...",
+    "solution": "소등 및 냉난방 운영 정책을 검토 중입니다.",
+    "priority_score": 65.1
+  },
+  {
+    "complaint_id": 8,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "샤워실 위치",
+    "category": "시설",
+    "content": "현재 샤워실 사용이 가능 한 위치가 어디인가요 샤워실 위치 학교에서 샤워할 일이 생길 것 같은데...",
+    "solution": "기숙사를 제외한 샤워실 위치를 시설팀에 문의하세요.",
+    "priority_score": 28.6
+  },
+  {
+    "complaint_id": 9,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "도서관 너무 추워요. 도서관 난방 부탁드립니다.",
+    "category": "시설",
+    "content": "도서관 난방 공부할 때 시설이 너무 추워서 난방 부탁드립니다.",
+    "solution": "난방 운영 시간을 조정 중입니다.",
+    "priority_score": 19.2
+  },
+  {
+    "complaint_id": 10,
+    "comment_count": 1,
+    "like_count":  5,
+    "title": "기숙사 헬스장 운영 관련하여 문의합니다.",
+    "category": "시설",
+    "content": "생활건강헬스센터 학교 시설 운영 문의 기숙사 비에 헬스장 운영비용도 포함되어 있는 것으로 알고 있는데...",
+    "solution": "헬스장 운영비와 개선 계획을 확인 중입니다.",
+    "priority_score": 91.7
+  }
+]
