@@ -8,11 +8,18 @@ public class UserDTO {
     @Getter
     @AllArgsConstructor
     public static class CreateUser{
-        String studentId;
+        String no;
         String password;
         String verificationCode;
         String name;
-        String department;
+        String major;
         String email;
+        String university;
+    }
+    @Getter
+    @AllArgsConstructor
+    public static class loginDto {
+        String no;
+        String password;
     }
 }
