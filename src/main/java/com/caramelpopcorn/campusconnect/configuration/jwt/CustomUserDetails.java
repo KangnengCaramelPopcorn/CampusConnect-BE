@@ -10,11 +10,11 @@ import java.util.List;
 
 public class CustomUserDetails implements UserDetails {
 
-    private final String username;
+    private final String id;
     private final String role;
 
-    public CustomUserDetails(String username, String role) {
-        this.username = username;
+    public CustomUserDetails(String id, String role) {
+        this.id = id;
         this.role = role;
     }
 
@@ -30,7 +30,7 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return username;
+        return id;
     }
 
     @Override

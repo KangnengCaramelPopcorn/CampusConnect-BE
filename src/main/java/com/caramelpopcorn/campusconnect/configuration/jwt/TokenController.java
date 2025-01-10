@@ -21,38 +21,26 @@ import java.util.Map;
 public class TokenController {
 
     private final JWTUtil jwtUtil;
+    private final TokenService tokenService;
 
     @PostMapping("/refresh")
     public ResponseEntity<?> refreshTokens(@CookieValue(value = "refresh_token", required = false) String refreshToken) {
+        System.out.println(
+                jwtUtil.parseToken(refreshToken).getExpiration());
         if (refreshToken == null || refreshToken.isEmpty()) {
             return ApiResponseUtil.createErrorResponse(CommonErrorCode.MISSING_REFRESH_TOKEN);
         }
 
         try {
+            System.out.println(
+                    jwtUtil.parseToken(refreshToken).getExpiration());
             if (jwtUtil.isTokenExpired(refreshToken)) {
                 return ApiResponseUtil.createErrorResponse(CommonErrorCode.EXPIRED_REFRESH_TOKEN);
             }
-
             String userId = jwtUtil.getUserId(refreshToken);
             String role = jwtUtil.getRole(refreshToken);
-            String newAccessToken = jwtUtil.createToken(JWTUtil.ACCESS, userId, role);
-
-            String newRefreshToken = jwtUtil.createToken(JWTUtil.REFRESH, userId, role);
-            Cookie refreshCookie = jwtUtil.createHttpOnlySecureCookie(newRefreshToken);
-
-            return ResponseEntity.ok()
-                    .header(HttpHeaders.SET_COOKIE, ResponseCookie.from(refreshCookie.getName(), refreshCookie.getValue())
-                            .httpOnly(true)
-                            .secure(true)
-                            .path(refreshCookie.getPath())
-                            .maxAge(refreshCookie.getMaxAge())
-                            .build().toString()
-                    )
-                    .body(ApiResponseUtil.createSuccessResponse(
-                            SuccessCode.TOKEN_REFRESH_SUCCESS,
-                            Map.of("access_token", newAccessToken)
-                    ));
-
+            System.out.println(tokenService.createToken(userId, role).getBody());
+            return tokenService.createToken(userId, role);
         } catch (IllegalStateException e) {
             return ApiResponseUtil.createErrorResponse(CommonErrorCode.INVALID_REFRESH_TOKEN);
         } catch (Exception e) {

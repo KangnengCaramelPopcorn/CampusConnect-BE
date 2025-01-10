@@ -65,27 +65,23 @@ public class JWTUtil {
                 .compact();
     }
     public Claims parseToken(String token) {
-        String[] parts = token.split("\\."); // JWT는 "Header.Payload.Signature"로 구성
-        if (parts.length != 3) {
-            throw new IllegalArgumentException("Invalid JWT structure");
-        }
-
-        String payloadJson = new String(Base64.getUrlDecoder().decode(parts[1]));
-        String type;
         try {
-            type = new ObjectMapper().readTree(payloadJson).get("type").asText();
+            // Access Token 검증
+            return Jwts.parser()
+                    .setSigningKey(accessSecretKey)
+                    .build()
+                    .parseClaimsJws(token)
+                    .getBody();
         } catch (Exception e) {
-            throw new IllegalArgumentException("Invalid JWT payload");
+            // Refresh Token 검증
+            return Jwts.parser()
+                    .setSigningKey(refreshSecretKey)
+                    .build()
+                    .parseClaimsJws(token)
+                    .getBody();
         }
-
-        SecretKey secretKey = type.equals("ACCESS") ? accessSecretKey : refreshSecretKey;
-
-        return Jwts.parser()
-                .setSigningKey(secretKey)
-                .build()
-                .parseClaimsJws(token)
-                .getBody();
     }
+
     public boolean isTokenExpired(String token) {
         try {
             Claims claims = parseToken(token);

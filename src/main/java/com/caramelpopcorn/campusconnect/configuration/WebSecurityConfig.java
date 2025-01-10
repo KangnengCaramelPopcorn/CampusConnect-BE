@@ -25,7 +25,7 @@ import java.util.List;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
-    private final List<String> freePathList = new ArrayList<>(List.of("/", "/env", "/hc", "/swagger-ui/index.html"));
+    private final List<String> freePathList = new ArrayList<>(List.of("/", "/env", "/hc", "/swagger-ui/index.html", "/api/user/signup", "/api/user/login"));
     private final JWTUtil jwtUtil;
     private final CustomUserDetailsService userDetailsService;
     @Bean
