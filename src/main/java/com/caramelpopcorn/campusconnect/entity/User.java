@@ -37,7 +37,6 @@ public class User {
         this.university = userDto.getUniversity();
         this.major = userDto.getMajor();
         this.role = role;
-        this.score = score;
     }
     public User(String no, String name) {
         this.no = no;
